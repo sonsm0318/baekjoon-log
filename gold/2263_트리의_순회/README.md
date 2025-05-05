@@ -24,9 +24,9 @@
 
     후위 순회 (Postorder): 왼쪽 → 오른쪽 → 현재
 
-void preorder(char node) { ... }
-void inorder(char node) { ... }
-void postorder(char node) { ... }
+void preorder(char node) { ... }  
+void inorder(char node) { ... }  
+void postorder(char node) { ... }  
 
 💡 변수/함수 네이밍 고민
 
