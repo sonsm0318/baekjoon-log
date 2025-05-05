@@ -61,7 +61,7 @@ void DFS(int curr, int parent)
         }
     }
 }
-
+    
 for (int i = 0; i < N; i++)
 {
     if (!visited[i])
@@ -72,7 +72,7 @@ for (int i = 0; i < N; i++)
             treeNum++;
     }
 }
-    
+      
 💡 교훈
 
     DFS에서 사이클 판정할 때 else if 구조를 꼭 신경 쓰자.
