@@ -7,15 +7,15 @@ Each folder contains the source code and a detailed thought process written in M
 
 ## 📁 Directory Structure
 
-baekjoon-log/
-├── 1991_트리_순회/
-│ ├── main.cpp ← C++ source code
-│ └── README.md ← Thought process, implementation notes, review
-├── 11724_연결_요소_구하기/
-│ ├── main.cpp
-│ └── README.md
-├── ...
-└── README.md ← This file
+baekjoon-log/  
+├── 1991_트리_순회/  
+│ ├── main.cpp ← C++ source code  
+│ └── README.md ← Thought process, implementation notes, review  
+├── 11724_연결_요소_구하기/  
+│ ├── main.cpp  
+│ └── README.md  
+├── ...  
+└── README.md ← This file  
 
 
 ---
