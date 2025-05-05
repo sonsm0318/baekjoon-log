@@ -38,6 +38,7 @@ void solve(int iStart, int iEnd, int pStart, int pEnd)
 	solve(iStart, idx - 1, pStart, pStart + leftSize - 1);  // 왼쪽 서브트리
 	solve(idx + 1, iEnd, pStart + leftSize, pEnd - 1);      // 오른쪽 서브트리
 }
+```
 
 ⚙️ 자료구조 설계 판단
 
