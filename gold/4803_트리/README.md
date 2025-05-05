@@ -32,7 +32,8 @@
 if (visited[neighbor] && neighbor != parent)
     loopCheck = true;
 treeNum++;  // (잘못된 위치)
-\```
+
+```
 
     DFS 중에 바로 트리 개수를 증가시켜서 사이클이 있어도 증가됨
 
@@ -73,7 +74,8 @@ for (int i = 0; i < N; i++)
             treeNum++;
     }
 }
-\```
+
+```
 
 💡 교훈
 
