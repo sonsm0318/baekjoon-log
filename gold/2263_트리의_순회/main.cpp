@@ -2,55 +2,26 @@
 #include <vector>
 using namespace std;
 
-struct Node
+int inOrderArray[100000];
+int hashInOrderArray[100000];
+int postOrderArray[100000];
+
+void solve(int iStart, int iEnd, int pStart, int pEnd)
 {
-	char left;
-	char right;
-};
-
-vector<vector<Node>> graph(26);
-
-void SearchRoot(char n)
-{
-	cout << n;
-
-	if (graph[n - 65][0].left != '.')
+	if (iStart > iEnd || pStart > pEnd)
 	{
-		SearchRoot(graph[n - 65][0].left);
-	}
-	if (graph[n - 65][0].right != '.')
-	{
-		SearchRoot(graph[n - 65][0].right);
-	}
-}
-
-void SearchLeft(char n)
-{
-	if (graph[n - 65][0].left != '.')
-	{
-		SearchLeft(graph[n - 65][0].left);
+		return;
 	}
 
-	cout << n;
+	int root = postOrderArray[pEnd];
+	cout << root << " ";
 
-	if (graph[n - 65][0].right != '.')
-	{
-		SearchLeft(graph[n - 65][0].right);
-	}
-}
+	int idx = hashInOrderArray[root];
 
-void SearchRight(char n)
-{
-	if (graph[n - 65][0].left != '.')
-	{
-		SearchRight(graph[n - 65][0].left);
-	}
-	if (graph[n - 65][0].right != '.')
-	{
-		SearchRight(graph[n - 65][0].right);
-	}
+	int leftSize = idx - iStart;
 
-	cout << n;
+	solve(iStart, idx - 1, pStart, pStart + leftSize - 1);
+	solve(idx + 1, iEnd, pStart + leftSize, pEnd - 1);
 }
 
 int main(void)
@@ -60,20 +31,15 @@ int main(void)
 
 	for (int cnt = 0; cnt < N; cnt++)
 	{
-		char parent, left, right;
-		cin >> parent;
-		cin >> left;
-		cin >> right;
-
-		graph[parent - 65].push_back({ left,right });
+		cin >> inOrderArray[cnt];
+		hashInOrderArray[inOrderArray[cnt]] = cnt;
+	}
+	for (int cnt = 0; cnt < N; cnt++)
+	{
+		cin >> postOrderArray[cnt];
 	}
 
-	SearchRoot('A');
-	cout << endl;
-	SearchLeft('A');
-	cout << endl;
-	SearchRight('A');
-	cout << endl;
+	solve(0, N - 1, 0, N - 1);
 
 	return 0;
 }
