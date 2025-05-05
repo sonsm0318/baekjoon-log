@@ -49,11 +49,11 @@ void solve(int iStart, int iEnd, int pStart, int pEnd)
     배열 기반 해시를 통해 O(1) 조회 최적화를 적용함
 
 ## 🤯 착각 & 개념 구분
-착각	교정
-계수 정렬이 LaTeX 정렬?	❌ → Counting Sort는 정렬 알고리즘, LaTeX은 수식 조판 시스템
-내가 만든 인덱스 테이블은 캐시인가?	❌ → 진짜 캐시는 CPU의 메모리 계층에 위치함.
-해시와 캐시 구분이 모호함	✅ → 해시는 위치 계산용, 캐시는 값 재사용용
-내가 만든 배열은?	✅ lookup table, 혹은 memoization array로 부르는 것이 정확
+착각	교정  
+계수 정렬이 LaTeX 정렬?	❌ → Counting Sort는 정렬 알고리즘, LaTeX은 수식 조판 시스템  
+내가 만든 인덱스 테이블은 캐시인가?	❌ → 진짜 캐시는 CPU의 메모리 계층에 위치함.  
+해시와 캐시 구분이 모호함	✅ → 해시는 위치 계산용, 캐시는 값 재사용  
+내가 만든 배열은?	✅ lookup table, 혹은 memoization array로 부르는 것이 정확  
 ## 🧠 정리된 개념
 개념	요약
 해시	키 → 해시 함수 → 정수 인덱스
