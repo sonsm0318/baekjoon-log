@@ -38,9 +38,8 @@ void solve(int iStart, int iEnd, int pStart, int pEnd)
 	solve(iStart, idx - 1, pStart, pStart + leftSize - 1);  // 왼쪽 서브트리
 	solve(idx + 1, iEnd, pStart + leftSize, pEnd - 1);      // 오른쪽 서브트리
 }
-```
 
-⚙️ 자료구조 설계 판단
+## ⚙️ 자료구조 설계 판단
 
     hashInOrderArray[]: 값을 인덱스로 바로 접근하기 위해 사용
 
@@ -48,18 +47,18 @@ void solve(int iStart, int iEnd, int pStart, int pEnd)
 
     배열 기반 해시를 통해 O(1) 조회 최적화를 적용함
 
-🤯 착각 & 개념 구분
+## 🤯 착각 & 개념 구분
 착각	교정
 계수 정렬이 LaTeX 정렬?	❌ → Counting Sort는 정렬 알고리즘, LaTeX은 수식 조판 시스템
 내가 만든 인덱스 테이블은 캐시인가?	❌ → 진짜 캐시는 CPU의 메모리 계층에 위치함.
 해시와 캐시 구분이 모호함	✅ → 해시는 위치 계산용, 캐시는 값 재사용용
 내가 만든 배열은?	✅ lookup table, 혹은 memoization array로 부르는 것이 정확
-🧠 정리된 개념
+## 🧠 정리된 개념
 개념	요약
 해시	키 → 해시 함수 → 정수 인덱스
 캐시	최근 사용된 값을 빠르게 재사용하는 임시 저장소 (자동 관리됨)
 lookup table	어떤 계산 결과를 미리 저장해두는 정적 배열 (캐시처럼 동작할 수 있음)
-✅ 얻은 교훈
+## ✅ 얻은 교훈
 
     개념을 “감으로” 접근하되, 정확한 정의로 검증하는 훈련이 중요하다
 
@@ -67,7 +66,7 @@ lookup table	어떤 계산 결과를 미리 저장해두는 정적 배열 (캐�
 
     캐시, 해시, 메모이제이션은 비슷하지만 역할과 구현이 다르다
 
-✍️ 앞으로 할 일
+## ✍️ 앞으로 할 일
 
     이 문제를 기반으로 트리 구조 복원, DP + 트리, 세그먼트 트리까지 확장할 예정
 
