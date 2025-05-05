@@ -22,7 +22,7 @@
 int idx = first + 1;
 while (idx < first + len && preOrderArray[idx] < root)
 	idx++;
-
+```
 
     idx는 오른쪽 서브트리의 시작 인덱스를 찾는 과정.
 
