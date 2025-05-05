@@ -32,7 +32,7 @@
 if (visited[neighbor] && neighbor != parent)
     loopCheck = true;
 treeNum++;  // (잘못된 위치)
-
+    
     DFS 중에 바로 트리 개수를 증가시켜서 사이클이 있어도 증가됨
 
     if로 분기해서 모든 인접 노드를 사이클로 오인할 수도 있음
@@ -45,7 +45,7 @@ else if (neighbor != parent)
     else if로 해야만 이전 DFS에서 넘어온 부모 노드를 제외하고만 사이클 탐지
 
 5. 정답 코드 핵심 부분
-
+```cpp
 void DFS(int curr, int parent)
 {
     visited[curr] = true;
@@ -72,7 +72,7 @@ for (int i = 0; i < N; i++)
             treeNum++;
     }
 }
-
+    
 💡 교훈
 
     DFS에서 사이클 판정할 때 else if 구조를 꼭 신경 쓰자.
