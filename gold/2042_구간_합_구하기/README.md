@@ -16,7 +16,7 @@ struct Data {
     long long data;  // 해당 구간의 합
     int start, end;  // 해당 노드가 담당하는 구간
 };
-
+```
 🧠 주요 함수
 
     makeSegeTree(N)
