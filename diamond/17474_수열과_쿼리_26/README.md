@@ -35,6 +35,7 @@ struct Node {
 
 3. 쿼리 처리 전략
 
+```cpp
 firstQuery (range-chmin):
 
 if (minNum >= max)             -> 아무 작업 안 함
@@ -61,7 +62,7 @@ void pushDown(int idx) {
     apply_chmin(tree[idx<<1|1], tree[idx].lazy);
     tree[idx].lazy = -1;
 }
-
+```
 🪛 디버깅 기준
 
     max == secondMax 상태는 segment tree beats 조건 위반
