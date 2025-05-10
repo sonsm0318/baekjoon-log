@@ -16,7 +16,7 @@
 
 ### 1. struct Node 설계
 
-cpp
+```cpp
 struct Node {
     int max;        // 최댓값
     int maxCount;   // max가 등장하는 횟수
@@ -24,7 +24,7 @@ struct Node {
     long long sum;  // 구간 합
     int lazy;       // lazy chmin 값 (-1이면 없음)
 };
-
+```
 2. 불변식 (Invariant)
 
     항상 max > secondMax
@@ -48,7 +48,7 @@ thirdQuery (range-sum):
 → lazy pushDown 후 자식 둘 sum 합산
 4. lazy 전파 구조
 
-inline void apply_chmin(Node& n, int x) {
+void apply_chmin(Node& n, int x) {
     if (x >= n.max) return;
     n.sum -= 1LL * (n.max - x) * n.maxCount;
     n.max = x;
